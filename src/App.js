@@ -28,9 +28,7 @@ const App = () => {
   }
 
   // grab the letter pressed
-  function grabLetter(letter) {
-    return console.log("this is " + letter);
-  }
+  function readLetter(letter) {}
 
   // change to game tab
   function displayTab() {
@@ -68,12 +66,17 @@ const App = () => {
     "V",
     "W",
   ];
+
   // swap from play button to letter buttons
   function displayButtons() {
+    // the game screen
     if (tab === 1) {
+      // map each letter to a button
       const buttonList = letters.map((letter) => (
         <Letter key={letter.id} letter={letter} />
       ));
+
+      // render map of letters + extra functionality
       return (
         <div className="grid grid-rows-2 grid-flow-col gap-2">
           <button
@@ -91,7 +94,9 @@ const App = () => {
           <ul className="flex justify-items-center">{buttonList}</ul>
         </div>
       );
-    } else {
+    }
+    // initial start up / user returns to menu
+    else {
       return (
         <button
           className="font-bold rounded-full text-xl shadow bg-blue-500 px-8 py-4 text-white hover:bg-green-400"
