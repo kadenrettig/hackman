@@ -1,13 +1,12 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Welcome from "./components/Welcome";
 import Game from "./components/Game";
-import Letter from "./components/Letter";
 
 const App = () => {
   const [tab, setTab] = useState(0);
-  const [score, setScore] = useState(0);
+  const [lives, setLives] = useState(9);
 
   // setTab for welcome
   function setWelcome() {
@@ -21,14 +20,11 @@ const App = () => {
     console.log("Game State");
   }
 
-  // reset your score
-  function resetScore() {
-    setScore(0);
-    console.log("Score reset");
+  // reset your lives after a loss
+  function resetLives() {
+    setLives(9);
+    console.log("Lives reset");
   }
-
-  // grab the letter pressed
-  function readLetter(letter) {}
 
   // change to game tab
   function displayTab() {
@@ -40,58 +36,24 @@ const App = () => {
     return <Welcome />;
   }
 
-  // array of letters for buttons
-  const letters = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-  ];
-
   // swap from play button to letter buttons
   function displayButtons() {
-    // the game screen
     if (tab === 1) {
-      // map each letter to a button
-      const buttonList = letters.map((letter) => (
-        <Letter key={letter.id} letter={letter} />
-      ));
-
       // render map of letters + extra functionality
       return (
-        <div className="grid grid-rows-2 grid-flow-col gap-2">
+        <div className="flex justify-items-center">
           <button
-            className="font-bold rounded-full text-xl shadow bg-blue-500 px-8 py-4 text-white hover:bg-green-400"
+            className="font-bold rounded-full text-xl shadow bg-blue-500 px-8 py-4 text-white hover:bg-green-400 m-4"
             onClick={setWelcome}
           >
             Back to Menu
           </button>
           <button
-            className="font-bold rounded-full text-xl shadow bg-blue-500 px-8 py-4 text-white hover:bg-green-400"
-            onClick={resetScore}
+            className="font-bold rounded-full text-xl shadow bg-blue-500 px-8 py-4 text-white hover:bg-green-400 m-4"
+            onClick={resetLives}
           >
             Reset
           </button>
-          <ul className="flex justify-items-center">{buttonList}</ul>
         </div>
       );
     }
@@ -141,7 +103,7 @@ const App = () => {
 
       {/* welcome + gamescreen */}
       <div className="flex items-center justify-center h-auto border-t-8 border-b-8 border-gray-500 bg-gradient-to-r from-blue-500 to-blue-500 via-gray-500 animate-gradient-x">
-        <div className="xl:w-1/2 w-4/5 pt-48 pb-32 flex flex-col items-center justify-center text-white h-auto">
+        <div className="xl:w-1/2 w-4/5 pt-32 pb-16 flex flex-col items-center justify-center text-white h-auto">
           {displayTab()}
         </div>
       </div>
