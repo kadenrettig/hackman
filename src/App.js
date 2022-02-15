@@ -43,13 +43,13 @@ const App = () => {
       return (
         <div className="flex justify-items-center">
           <button
-            className="font-bold rounded-full text-xl shadow bg-blue-500 px-8 py-4 text-white hover:bg-green-400 m-4"
+            className="font-bold rounded-full text-xl shadow bg-green-600 px-8 py-4 text-white hover:bg-green-400 m-4"
             onClick={setWelcome}
           >
             Back to Menu
           </button>
           <button
-            className="font-bold rounded-full text-xl shadow bg-blue-500 px-8 py-4 text-white hover:bg-green-400 m-4"
+            className="font-bold rounded-full text-xl shadow bg-green-600 px-8 py-4 text-white hover:bg-green-400 m-4"
             onClick={resetLives}
           >
             Reset
@@ -61,7 +61,7 @@ const App = () => {
     else {
       return (
         <button
-          className="font-bold rounded-full text-xl shadow bg-blue-500 px-8 py-4 text-white hover:bg-green-400"
+          className="font-bold rounded-full text-xl shadow bg-green-600 px-8 py-4 text-white hover:bg-green-400"
           onClick={setGame}
         >
           Play Game
@@ -80,12 +80,12 @@ const App = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <button className="font-bold rounded-full text-xl shadow bg-blue-500 px-4 py-2 text-white hover:bg-green-400 m-4">
+            <button className="font-bold rounded-full text-xl shadow bg-green-600 px-4 py-2 text-white hover:bg-green-400 m-4">
               GitHub
             </button>
           </a>
           <a href="https://oregano.surge.sh" target="_blank" rel="noreferrer">
-            <button className="font-bold rounded-full text-xl shadow bg-blue-500 px-4 py-2 text-white hover:bg-green-400 m-4">
+            <button className="font-bold rounded-full text-xl shadow bg-green-600 px-4 py-2 text-white hover:bg-green-400 m-4">
               About Me
             </button>
           </a>
@@ -94,7 +94,7 @@ const App = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <button className="font-bold rounded-full text-xl shadow bg-blue-500 px-4 py-2 text-white hover:bg-green-400 m-4">
+            <button className="font-bold rounded-full text-xl shadow bg-green-600 px-4 py-2 text-white hover:bg-green-400 m-4">
               About This Project
             </button>
           </a>
@@ -102,7 +102,7 @@ const App = () => {
       </div>
 
       {/* welcome + gamescreen */}
-      <div className="flex items-center justify-center h-auto border-t-8 border-b-8 border-gray-500 bg-gradient-to-r from-blue-500 to-blue-500 via-gray-500 animate-gradient-x">
+      <div className="flex items-center justify-center h-auto border-t-8 border-b-8 border-gray-500 bg-gradient-to-r from-green-900 to-green-600 via-gray-600 animate-gradient-x">
         <div className="xl:w-1/2 w-4/5 pt-32 pb-16 flex flex-col items-center justify-center text-white h-auto">
           {displayTab()}
         </div>
