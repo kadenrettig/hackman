@@ -1,0 +1,113 @@
+.game-container {
+  padding: 20px 30px;
+  position: relative;
+  margin: auto;
+  height: 350px;
+  width: 450px;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.figure-part {
+  display: none;
+}
+
+.wrong-letters-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-family: monospace;
+}
+
+.wrong-letters-container p {
+  margin: 0 0 5px;
+  font-family: monospace;
+}
+
+.wrong-letters-container span {
+  font-size: 24px;
+  font-family: monospace;
+}
+
+.word {
+  display: flex;
+}
+
+.letter {
+  border-bottom: 3px solid #fffffff1;
+  display: inline-flex;
+  font-family: monospace;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px;
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background: #3a4953;
+  font-family: monospace;
+  font-size: 30px;
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 10px 3px rgba(8, 8, 8, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup button {
+  cursor: pointer;
+  background-color: #fff;
+  color: #202727;
+  border: 0;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.popup button:active {
+  transform: scale(0.98);
+}
+
+.popup button:focus {
+  outline: 0;
+}
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 10px 10px;
+  padding: 15px 20px;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.notification-container p {
+  margin: 0;
+}
+
+.notification-container.show {
+  transform: translateY(-50px);
+  opacity: 1;
+}
