@@ -5418,6 +5418,11 @@
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
+"fs@^0.0.1-security":
+  "integrity" "sha1-invTcYa23d84E/I4WLV+yq9eQdQ="
+  "resolved" "https://registry.npmjs.org/fs/-/fs-0.0.1-security.tgz"
+  "version" "0.0.1-security"
+
 "fstream@>=1.0.12":
   "integrity" "sha512-WvJ193OHa0GHPEL+AycEJgxvBEwyfRkN1vhjca23OaPVMCaLCXTd5qAu82AjTcgP1UJmytkOKb63Ypde7raDIg=="
   "resolved" "https://registry.npmjs.org/fstream/-/fstream-1.0.12.tgz"

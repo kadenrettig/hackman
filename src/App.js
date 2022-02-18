@@ -1,32 +1,32 @@
-import React from 'react';
-import { useState } from 'react';
+import React from 'react'
+import { useState } from 'react'
 
-import Welcome from './components/Welcome';
-import Game from './components/Game';
+import Welcome from './components/Welcome'
+import Game from './components/Game'
 
 const App = () => {
-  const [tab, setTab] = useState(0);
+  const [tab, setTab] = useState(0)
 
   // setTab for welcome
   function setWelcome() {
-    setTab(0);
-    console.log('Welcome State');
+    setTab(0)
+    console.log('Welcome State')
   }
 
   // setTab for game
   function setGame() {
-    setTab(1);
-    console.log('Game State');
+    setTab(1)
+    console.log('Game State')
   }
 
   // change to game tab
   function displayTab() {
     if (tab === 1) {
-      console.log('Game Started');
-      return <Game />;
+      console.log('Game Started')
+      return <Game />
     }
-    console.log('Welcome to HackMan');
-    return <Welcome />;
+    console.log('Welcome to HackMan')
+    return <Welcome />
   }
 
   // swap from play button to letter buttons
@@ -42,7 +42,7 @@ const App = () => {
             Back to Menu
           </button>
         </div>
-      );
+      )
     }
     // initial start up / user returns to menu
     else {
@@ -53,7 +53,7 @@ const App = () => {
         >
           Play Game
         </button>
-      );
+      )
     }
   }
 
@@ -71,11 +71,6 @@ const App = () => {
               GitHub
             </button>
           </a>
-          <a href='https://oregano.surge.sh' target='_blank' rel='noreferrer'>
-            <button className='font-bold rounded-full text-xl shadow bg-green-600 px-4 py-2 text-white hover:bg-green-400 m-4'>
-              About Me
-            </button>
-          </a>
           <a
             href='https://github.com/kadenrettig/hackman/blob/main/README.md'
             target='_blank'
@@ -85,12 +80,17 @@ const App = () => {
               About This Project
             </button>
           </a>
+          <a href='https://oregano.surge.sh' target='_blank' rel='noreferrer'>
+            <button className='font-bold rounded-full text-xl shadow bg-green-600 px-4 py-2 text-white hover:bg-green-400 m-4'>
+              About Me
+            </button>
+          </a>
         </div>
       </div>
 
       {/* welcome + gamescreen */}
       <div className='flex items-center justify-center h-auto border-t-8 border-b-8 border-gray-500 bg-gradient-to-r from-green-900 to-green-600 via-gray-600 animate-gradient-x'>
-        <div className='xl:w-1/2 w-4/5 pt-32 pb-16 flex flex-col items-center justify-center text-white h-auto'>
+        <div className='xl:w-1/2 w-4/5 pt-16 pb-16 flex flex-col items-center justify-center text-white h-auto'>
           {displayTab()}
         </div>
       </div>
@@ -104,7 +104,7 @@ const App = () => {
         @Kaden Rettig. HackMan 2022.
       </div>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
